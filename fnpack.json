@@ -1,0 +1,151 @@
+{
+  "schema_version": "2",
+  "source_info": {
+    "name": "jiaaom fnOS repo",
+    "author": "Mason",
+    "homepage": "https://github.com/jiaaom/FnDepot",
+    "description": "jiaaom 的 fnOS 应用仓库",
+    "i18n": {
+      "en-US": {
+        "name": "jiaaom fygoOS repo",
+        "description": "fnOS apps developed and maintained by jiaaom."
+      }
+    }
+  },
+  "apps": {
+    "t6-drivers": {
+      "display_name": "T6 驱动",
+      "desc": "UnifyDrive UP6 / 极空间 T6 / PA60 的内核驱动（DKMS）：风扇、温度、LED、背光、蜂鸣器、按键、电池充电控制、触摸屏以及 HDMI 转 DSI 屏幕桥接。三件套中需第一个安装。",
+      "i18n": {
+        "en-US": {
+          "display_name": "T6 Drivers",
+          "desc": "Kernel drivers (DKMS) for the UnifyDrive UP6 / ZSpace T6 / PA60: fans, temperatures, LEDs, backlight, beeper, keys, battery charge control, touchscreen and HDMI-to-DSI panel bridge. Install this first."
+        }
+      },
+      "platform": [
+        "x86"
+      ],
+      "categories": [
+        "硬件驱动"
+      ],
+      "icon_url": "./t6-drivers/ICON.PNG",
+      "readme_url": "./t6/README.zh-CN.md",
+      "bug_report_url": "https://github.com/jiaaom/up6-linux-drivers/issues",
+      "maintainer": "Mason",
+      "maintainer_url": "https://github.com/jiaaom/up6-linux-drivers",
+      "run_as": "root",
+      "install_type": "root",
+      "is_docker": false,
+      "service_port": "",
+      "releases": {
+        "1.4.0": {
+          "changelog": "重启后屏幕亮度可以正确恢复（t6-platform 0.9.15：背光在 EC 就绪后才出现，systemd-backlight 的恢复不再失败）。",
+          "i18n": {
+            "en-US": {
+              "changelog": "The screen brightness is restored correctly after a reboot (t6-platform 0.9.15: the backlight appears only once the EC is ready, so systemd-backlight's restore no longer fails)."
+            }
+          },
+          "updated_at": "2026-09-28T13:31:00+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v1.4/t6-drivers.fpk",
+              "sha256": "b0501c4668b655c3f921819a8fd20e1a82a61e73d74f809effde5e9f255bd968",
+              "size": 44971
+            }
+          }
+        }
+      }
+    },
+    "t6-control": {
+      "display_name": "T6 控制中心",
+      "desc": "UnifyDrive UP6 / 极空间 T6 的风扇曲线、LED、屏幕亮度、电池充电上限和蜂鸣器设置。需先安装 T6 驱动。",
+      "i18n": {
+        "en-US": {
+          "display_name": "T6 Control Center",
+          "desc": "Fan curves, LEDs, display brightness, battery charge limits and beeper of the UnifyDrive UP6 / ZSpace T6. Requires T6 Drivers."
+        }
+      },
+      "platform": [
+        "x86"
+      ],
+      "categories": [
+        "硬件驱动",
+        "系统工具"
+      ],
+      "icon_url": "./t6-control/ICON.PNG",
+      "readme_url": "./t6/README.zh-CN.md",
+      "bug_report_url": "https://github.com/jiaaom/up6-linux-drivers/issues",
+      "maintainer": "Mason",
+      "maintainer_url": "https://github.com/jiaaom/up6-linux-drivers",
+      "run_as": "root",
+      "install_type": "root",
+      "is_docker": false,
+      "service_port": "",
+      "releases": {
+        "1.4.0": {
+          "changelog": "新增 remoted 服务：原装蓝牙遥控器（T2_remote_RC001）配对后可作为键盘使用（方向键、确定、返回、主页、菜单、音量、静音）；其他遥控器的键位映射可写在 /etc/remoted.toml。仪表盘显示遥控器连接状态、配对提示和按键测试（最后一次按键仅保留 5 分钟）。",
+          "i18n": {
+            "en-US": {
+              "changelog": "New remoted service: the stock Bluetooth remote (T2_remote_RC001) works as a keyboard once paired (arrows, OK, Back, Home, Menu, volume, mute); key maps for other remotes go in /etc/remoted.toml. The dashboard shows the remote's connection, a pairing hint and a key test (the last key is kept for 5 minutes only)."
+            }
+          },
+          "updated_at": "2026-09-28T13:31:00+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v1.4/t6-control.fpk",
+              "sha256": "d950f6e7201722f523ba868710f8488688d0ebd630d4ed9d5b19740025ef3833",
+              "size": 2621292
+            }
+          }
+        }
+      }
+    },
+    "t6-panel": {
+      "display_name": "T6 前面板",
+      "desc": "UnifyDrive UP6 / 极空间 T6 前置触摸屏应用：仪表盘、屏幕与网络信息、设备设置，内置视频和音乐播放器。需先安装 T6 控制中心。",
+      "i18n": {
+        "en-US": {
+          "display_name": "T6 Front Panel",
+          "desc": "Front touch-screen app for the UnifyDrive UP6 / ZSpace T6: dashboard, screen and network info, device settings, and a built-in video and music player. Requires T6 Control Center."
+        }
+      },
+      "platform": [
+        "x86"
+      ],
+      "categories": [
+        "系统工具",
+        "影音娱乐"
+      ],
+      "icon_url": "./t6-panel/ICON.PNG",
+      "readme_url": "./t6/README.zh-CN.md",
+      "bug_report_url": "https://github.com/jiaaom/up6-linux-drivers/issues",
+      "maintainer": "Mason",
+      "maintainer_url": "https://github.com/jiaaom/up6-linux-drivers",
+      "run_as": "root",
+      "install_type": "root",
+      "is_docker": false,
+      "service_port": "",
+      "releases": {
+        "1.4.0": {
+          "changelog": "支持遥控器和键盘操作：方向键移动焦点框，确定打开，返回、主页、菜单在所有页面可用，音量键调节音量（视频播放器中同样适用）。熄屏时屏幕会拦截所有按键和触摸：按键或双击唤醒，音量键不唤醒。屏幕关闭前淡出、唤醒时淡入，淡出过程中按键可取消熄屏。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Remote and keyboard control: the arrow keys move a focus ring, OK opens, Back, Home and Menu work everywhere, and the volume keys set the volume, including in the video player. While the screen is dark it takes every key and touch: a key or a double tap wakes it, the volume keys don't. The screen fades to black before switching off and fades back in; a key during the fade cancels the switch-off."
+            }
+          },
+          "updated_at": "2026-09-28T13:31:00+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v1.4/t6-panel.fpk",
+              "sha256": "576532cd6907ec82a8856ccbea6fcb8e196a8ccf864c695afcd476f75db0877f",
+              "size": 129588145
+            }
+          }
+        }
+      }
+    }
+  }
+}
