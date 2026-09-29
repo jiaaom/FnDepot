@@ -143,6 +143,23 @@
               "size": 46232
             }
           }
+        },
+        "1.1.0": {
+          "changelog": "按优先级分配键盘焦点：应用可在运行期间独占键盘和遥控器（规则键 focus-priority），例如前面板进入屏保时，电视应用仍保有遥控器。窗口可以不重启合成器直接移到另一块屏幕（控制命令 set-output），屏幕稍后接上时窗口也会自动移过去。屏幕未连接时，窗口可以保持隐藏，而不是出现在其他应用的屏幕上（规则键 output-fallback=none）。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Keyboard focus by priority: an app can keep the keyboard and remote while it runs (rule key focus-priority), so a TV app keeps the remote even when the front panel's screensaver is up on the other screen. Windows can move to another screen without restarting the compositor (control command set-output), and move to their screen when it is connected later. A window whose screen is not connected can stay hidden instead of opening on another app's screen (rule key output-fallback=none)."
+            }
+          },
+          "updated_at": "2026-09-30T04:28:58+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/appliance-compositor/releases/download/v1.1.0/appliance-compositor.fpk",
+              "sha256": "3f06dfdb1b5036b77751f3777532a5c566e3ca03049fbc04e2ceff2345bbad3b",
+              "size": 48287
+            }
+          }
         }
       }
     },
@@ -255,6 +272,23 @@
               "download_url": "https://github.com/jiaaom/fygo-cinema/releases/download/v1.0.0/fygo-cinema.fpk",
               "sha256": "6e283b74befced9c256e1d3a5c4ac01b81cc27041c65e30b413d4f34fb832a27",
               "size": 126759856
+            }
+          }
+        },
+        "1.1.0": {
+          "changelog": "Fygo Cinema 运行期间，遥控器始终留在电视上，前面板熄屏时也一样（需要 Appliance Compositor 1.1）。把电视改插到另一个接口，或在管理页换一块电视屏幕时，不再重启显示服务，其他屏幕不受影响（需要 Appliance Compositor 1.1；旧版仍会重启）。电视拔掉期间，它的窗口不会出现在其他屏幕上。拔掉电视时，电视应用会正常退出。",
+          "i18n": {
+            "en-US": {
+              "changelog": "The remote stays with the TV while Fygo Cinema runs, also when the front panel's screen goes dark (needs Appliance Compositor 1.1). Moving the TV to another port, or choosing another TV screen on the admin page, no longer restarts the display server, so the other screens are not interrupted (with Appliance Compositor 1.1; older ones are still restarted). While the TV is unplugged its window never shows on another screen. Unplugging the TV now stops the TV app cleanly."
+            }
+          },
+          "updated_at": "2026-09-30T04:29:53+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/fygo-cinema/releases/download/v1.1.0/fygo-cinema.fpk",
+              "sha256": "329ac053f33dc08f094250a873712538c842d2130020556ecd8185d3077458d7",
+              "size": 126772200
             }
           }
         }
