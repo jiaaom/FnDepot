@@ -10,7 +10,8 @@ UnifyDrive UP6 / 极空间 T6 的 fnOS 应用：驱动、控制中心和前面�
 
 1. **T6 驱动**（`t6-drivers`）
 2. **T6 控制中心**（`t6-control`）
-3. **T6 前面板**（`t6-panel`）
+3. **Appliance Compositor**（`appliance-compositor`），显示和声音服务，见[说明](../appliance-compositor/README.zh-CN.md)
+4. **T6 前面板**（`t6-panel`）
 
 升级前请先卸载旧版本，并选择 **保留** 设置。
 

@@ -102,13 +102,57 @@
         }
       }
     },
+    "appliance-compositor": {
+      "display_name": "Appliance Compositor",
+      "desc": "屏幕类应用共用的显示和声音服务：一个 Wayland 合成器（weston + appliance-shell）驱动所有屏幕，一个 PipeWire 声音服务。本身没有界面；T6 前面板、Fygo Cinema 等应用依赖它，需先安装。",
+      "i18n": {
+        "en-US": {
+          "display_name": "Appliance Compositor",
+          "desc": "Shared display and sound server for screen apps: one Wayland compositor (weston + appliance-shell) on every display and one PipeWire sound server. No window of its own; apps such as T6 Front Panel and Fygo Cinema depend on it, so install it first."
+        }
+      },
+      "platform": [
+        "x86"
+      ],
+      "categories": [
+        "系统工具"
+      ],
+      "icon_url": "./appliance-compositor/ICON.PNG",
+      "readme_url": "./appliance-compositor/README.zh-CN.md",
+      "bug_report_url": "https://github.com/jiaaom/appliance-compositor/issues",
+      "maintainer": "Mason",
+      "maintainer_url": "https://github.com/jiaaom/appliance-compositor",
+      "run_as": "root",
+      "install_type": "root",
+      "is_docker": false,
+      "service_port": "",
+      "releases": {
+        "1.0.0": {
+          "changelog": "首个版本。weston 14 与 appliance-shell（按规则叠放窗口、单窗口旋转、控制接口）以及 appliance-screensaver，接管自 T6 前面板；PipeWire、WirePlumber 和 pipewire-pulse 以系统级服务运行。各应用在 /etc/appliance-compositor/clients.d 中登记自己的窗口和屏幕。缺少时自动从 bookworm-backports 安装 weston 14、Mesa 24 和 PipeWire；装有 PulseAudio 时拒绝安装。",
+          "i18n": {
+            "en-US": {
+              "changelog": "First release. weston 14 with appliance-shell (window stacking by rule, per-window rotation, control socket) and appliance-screensaver, taken over from T6 Front Panel; PipeWire, WirePlumber and pipewire-pulse run system-wide. Apps register their windows and outputs in /etc/appliance-compositor/clients.d. Installs weston 14, Mesa 24 and PipeWire from bookworm-backports when missing; refused while PulseAudio is installed."
+            }
+          },
+          "updated_at": "2026-09-29T13:03:02+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/appliance-compositor/releases/download/v1.0.0/appliance-compositor.fpk",
+              "sha256": "c674b8c3c56f32fceb83d3f32933ebb3edfa97faf98382a5b2df77f64d21a72a",
+              "size": 46232
+            }
+          }
+        }
+      }
+    },
     "t6-panel": {
       "display_name": "T6 前面板",
-      "desc": "UnifyDrive UP6 / 极空间 T6 前置触摸屏应用：仪表盘、屏幕与网络信息、设备设置，内置视频和音乐播放器。需先安装 T6 控制中心。",
+      "desc": "UnifyDrive UP6 / 极空间 T6 前置触摸屏应用：仪表盘、屏幕与网络信息、设备设置，内置视频和音乐播放器。需先安装 T6 控制中心和 Appliance Compositor。",
       "i18n": {
         "en-US": {
           "display_name": "T6 Front Panel",
-          "desc": "Front touch-screen app for the UnifyDrive UP6 / ZSpace T6: dashboard, screen and network info, device settings, and a built-in video and music player. Requires T6 Control Center."
+          "desc": "Front touch-screen app for the UnifyDrive UP6 / ZSpace T6: dashboard, screen and network info, device settings, and a built-in video and music player. Requires T6 Control Center and Appliance Compositor."
         }
       },
       "platform": [
@@ -142,6 +186,75 @@
               "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v1.4/t6-panel.fpk",
               "sha256": "576532cd6907ec82a8856ccbea6fcb8e196a8ccf864c695afcd476f75db0877f",
               "size": 129588145
+            }
+          }
+        },
+        "1.4.1": {
+          "changelog": "显示和声音服务改由新的 Appliance Compositor 应用提供（需先安装），可与其他屏幕应用（例如在电视上运行的 Fygo Cinema）共用；前面板、视频播放器和屏保仍显示在内置屏幕上。屏幕键盘的回车键会执行文件搜索并收起键盘，不再误点焦点框所在的按钮。",
+          "i18n": {
+            "en-US": {
+              "changelog": "The screen and sound server now come from the new Appliance Compositor app (install it first), shared with other screen apps such as Fygo Cinema on a TV; the panel, its video player and screensaver stay on the built-in screen. The on-screen keyboard's return key runs the Files search and closes the keyboard, instead of clicking whatever the focus ring was on."
+            }
+          },
+          "updated_at": "2026-09-29T13:21:20+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v1.4.1/t6-panel.fpk",
+              "sha256": "1b8c9485b9ecfa6d7e3a659ae838fdc66ec4e5b5dc3757ad3c800cf6e95a4b1b",
+              "size": 129554464
+            }
+          }
+        }
+      }
+    },
+    "fygo-cinema": {
+      "display_name": "Fygo Cinema",
+      "desc": "在电视上看飞牛影视：NAS 自带的飞牛影视网页版全屏显示在接到 NAS 的电视上，用遥控器操作，视频硬件解码。自动登录，插上电视即启动，声音从电视扬声器播放。需先安装飞牛影视和 Appliance Compositor。",
+      "i18n": {
+        "en-US": {
+          "display_name": "Fygo Cinema",
+          "desc": "Fygo TV on your TV: the NAS's own Fygo TV web app fullscreen on a TV plugged into the NAS, driven by a remote, with hardware video decoding. Signs in by itself, starts when the TV is plugged in and plays through the TV's speakers. Requires Fygo TV and Appliance Compositor."
+        }
+      },
+      "platform": [
+        "x86"
+      ],
+      "categories": [
+        "影音娱乐"
+      ],
+      "icon_url": "./fygo-cinema/ICON.PNG",
+      "preview_urls": [
+        "https://raw.githubusercontent.com/jiaaom/fygo-cinema/main/assets/home.jpg",
+        "https://raw.githubusercontent.com/jiaaom/fygo-cinema/main/assets/detail-subtitles.jpg",
+        "https://raw.githubusercontent.com/jiaaom/fygo-cinema/main/assets/player-subtitles.jpg",
+        "https://raw.githubusercontent.com/jiaaom/fygo-cinema/main/assets/player-volume.jpg",
+        "https://raw.githubusercontent.com/jiaaom/fygo-cinema/main/assets/setup.jpg",
+        "https://raw.githubusercontent.com/jiaaom/fygo-cinema/main/assets/admin.png"
+      ],
+      "readme_url": "./fygo-cinema/README.zh-CN.md",
+      "bug_report_url": "https://github.com/jiaaom/fygo-cinema/issues",
+      "maintainer": "Mason",
+      "maintainer_url": "https://github.com/jiaaom/fygo-cinema",
+      "run_as": "root",
+      "install_type": "root",
+      "is_docker": false,
+      "service_port": "",
+      "releases": {
+        "1.0.0": {
+          "changelog": "首个版本。飞牛影视全屏显示在电视上，用遥控器操作：每个页面都有方向键导航和焦点框，支持确定和返回；播放器中上 / 下键呼出控制栏（倍速、清晰度、字幕、音轨）。硬件解码最高 4K HDR。使用管理页填写的账户自动登录，重启后保持登录；没有账户或登录失败时，电视上会显示下一步操作和二维码，不会黑屏。插上电视即启动、拔下即停止；声音从电视扬声器播放，遥控器音量键调节电视音量并显示音量条。页面大小按屏幕调整（高于 1080p 为 200%，否则为 150%，可修改）。遥控器碰不到管理和账户相关的按钮。",
+          "i18n": {
+            "en-US": {
+              "changelog": "First release. Fygo TV fullscreen on the TV, driven by a remote: arrow-key navigation with a focus ring on every page, OK and Back; in the player, up/down bring up the controls (speed, quality, subtitles, audio track). Hardware video decoding up to 4K HDR. Signs in by itself with the account entered on the admin page and stays signed in across restarts; without an account, or when sign-in fails, the TV shows what to do with a QR code instead of a black screen. Starts when the TV is plugged in and stops when it is unplugged; plays through the TV's speakers; the remote's volume keys set the TV volume with an on-screen display. The page is sized for the screen (200 % above 1080p, 150 % otherwise, adjustable). Admin and account controls are hidden from the remote."
+            }
+          },
+          "updated_at": "2026-09-29T13:13:16+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/fygo-cinema/releases/download/v1.0.0/fygo-cinema.fpk",
+              "sha256": "6e283b74befced9c256e1d3a5c4ac01b81cc27041c65e30b413d4f34fb832a27",
+              "size": 126759856
             }
           }
         }

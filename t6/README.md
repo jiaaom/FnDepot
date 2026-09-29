@@ -10,7 +10,8 @@ Source: <https://github.com/jiaaom/up6-linux-drivers>
 
 1. **T6 Drivers** (`t6-drivers`)
 2. **T6 Control Center** (`t6-control`)
-3. **T6 Front Panel** (`t6-panel`)
+3. **Appliance Compositor** (`appliance-compositor`), the display and sound server, see [its page](../appliance-compositor/README.md)
+4. **T6 Front Panel** (`t6-panel`)
 
 To upgrade, uninstall first and choose **Keep** settings.
 
