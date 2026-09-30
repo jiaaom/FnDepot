@@ -160,6 +160,23 @@
               "size": 48287
             }
           }
+        },
+        "1.1.1": {
+          "changelog": "修复：重启后屏幕可能一直黑着。显示服务在开机画面（Plymouth）期间启动，拿不到显示器；现在会等开机画面结束后再启动。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Fix: after a reboot the screens could stay dark. The compositor started under the boot splash (Plymouth) and could not take the displays; it now waits for the splash to end."
+            }
+          },
+          "updated_at": "2026-09-30T13:12:20+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/appliance-compositor/releases/download/v1.1.1/appliance-compositor.fpk",
+              "sha256": "27d0b7b3107926270c62e9ef356ad55ed69ac93b7db053bb71c17bc18686fe4d",
+              "size": 48986
+            }
+          }
         }
       }
     },
@@ -289,6 +306,23 @@
               "download_url": "https://github.com/jiaaom/fygo-cinema/releases/download/v1.1.0/fygo-cinema.fpk",
               "sha256": "329ac053f33dc08f094250a873712538c842d2130020556ecd8185d3077458d7",
               "size": 126772200
+            }
+          }
+        },
+        "1.1.1": {
+          "changelog": "修复：重启后电视可能黑屏只剩一条线、遥控器没反应。电视应用比飞牛影视先启动，停在了服务器的错误页；现在会显示“正在连接 Fygo TV…”，飞牛影视就绪后自动进入。页面加载后没有焦点框时也会自动补上。建议同时升级 Appliance Compositor 1.1.1。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Fix: after a reboot the TV could stay black with a thin line and the remote seemed dead. The TV app started before Fygo TV was ready and kept the server's error page; it now shows \"Connecting to Fygo TV…\" and goes on by itself once Fygo TV is up. The focus ring also comes back by itself if a page loads without one. Appliance Compositor 1.1.1 is recommended too."
+            }
+          },
+          "updated_at": "2026-09-30T13:12:30+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/fygo-cinema/releases/download/v1.1.1/fygo-cinema.fpk",
+              "sha256": "cad2b3cc4af33891c1ad877a18eaf5c7e07e2840167f6798b9769f271d90abb6",
+              "size": 126772945
             }
           }
         }
