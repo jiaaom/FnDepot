@@ -244,7 +244,7 @@
     },
     "fygo-cinema": {
       "display_name": "Fygo Cinema",
-      "desc": "在电视上看飞牛影视：NAS 自带的飞牛影视网页版全屏显示在接到 NAS 的电视上，用遥控器操作，视频硬件解码。自动登录，插上电视即启动，声音从电视扬声器播放。需先安装飞牛影视和 Appliance Compositor。",
+      "desc": "直连电视看飞牛影视：NAS 自带的飞牛影视网页版全屏显示在接到 NAS 的电视上，用遥控器操作，视频硬件解码。自动登录，插上电视即启动，声音从电视扬声器播放。需先安装飞牛影视和 Appliance Compositor。",
       "i18n": {
         "en-US": {
           "display_name": "Fygo Cinema",
@@ -323,6 +323,23 @@
               "download_url": "https://github.com/jiaaom/fygo-cinema/releases/download/v1.1.1/fygo-cinema.fpk",
               "sha256": "cad2b3cc4af33891c1ad877a18eaf5c7e07e2840167f6798b9769f271d90abb6",
               "size": 126772945
+            }
+          }
+        },
+        "1.1.2": {
+          "changelog": "电视端不再把播放过的视频缓存到系统盘（看几部片就是几百 MB，而且从不复用）；升级时会自动删除旧缓存。",
+          "i18n": {
+            "en-US": {
+              "changelog": "The TV app no longer fills the system disk with a cache of the videos it played (hundreds of MB after a few films, never reused); the old cache is removed on upgrade."
+            }
+          },
+          "updated_at": "2026-10-01T12:45:44+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/fygo-cinema/releases/download/v1.1.2/fygo-cinema.fpk",
+              "sha256": "2c8c2e41b128ae244a2a16db881294d6ff788c7d7f429af243e1261dabad0f12",
+              "size": 126770902
             }
           }
         }
