@@ -153,6 +153,23 @@
               "size": 2621393
             }
           }
+        },
+        "2.0.1": {
+          "changelog": "fnOS 设为中文时页面恢复正常；自 1.2.0 起会停在“Page error”，不显示任何读数。",
+          "i18n": {
+            "en-US": {
+              "changelog": "The page works again when fnOS is set to Chinese; since 1.2.0 it stopped with a \"Page error\" and showed no readings."
+            }
+          },
+          "updated_at": "2026-10-17T07:17:24+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.0.1/t6-control.fpk",
+              "sha256": "4864caca4d870424df628d26f104c9745b64fe7d24d961b7c40166351146bf5f",
+              "size": 2621356
+            }
+          }
         }
       }
     },
