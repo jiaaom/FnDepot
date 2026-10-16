@@ -54,6 +54,23 @@
               "size": 44971
             }
           }
+        },
+        "2.0.0": {
+          "changelog": "与 T6 前面板 2.0 一同发布，本身没有改动。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Released together with T6 Front Panel 2.0; no changes of its own."
+            }
+          },
+          "updated_at": "2026-10-17T06:58:57+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.0/t6-drivers.fpk",
+              "sha256": "ccc7b73d16a1b166276b75fe89eafc70344220146a4f47be9d66b41894bce240",
+              "size": 44969
+            }
+          }
         }
       }
     },
@@ -74,6 +91,9 @@
         "系统工具"
       ],
       "icon_url": "./t6-control/ICON.PNG",
+      "preview_urls": [
+        "https://raw.githubusercontent.com/jiaaom/FnDepot/main/t6-control/dashboard.jpg"
+      ],
       "readme_url": "./t6/README.zh-CN.md",
       "bug_report_url": "https://github.com/jiaaom/up6-linux-drivers/issues",
       "maintainer": "Mason",
@@ -114,6 +134,23 @@
               "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v1.4.2/t6-control.fpk",
               "sha256": "e19efcb862c59c6dd87c6c2c255c8f4e6a56a56f0e0b4a9384dd9b894d2e1b9b",
               "size": 2621316
+            }
+          }
+        },
+        "2.0.0": {
+          "changelog": "与 T6 前面板 2.0 一同发布，本身没有改动。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Released together with T6 Front Panel 2.0; no changes of its own."
+            }
+          },
+          "updated_at": "2026-10-17T06:58:57+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.0/t6-control.fpk",
+              "sha256": "ebc0d68533276fba709556ea257edd99e825eff49ec6d6a077a2b70146a55a1e",
+              "size": 2621393
             }
           }
         }
@@ -199,11 +236,11 @@
     },
     "t6-panel": {
       "display_name": "T6 前面板",
-      "desc": "UnifyDrive UP6 / 极空间 T6 前置触摸屏应用：仪表盘、屏幕与网络信息、设备设置，内置视频和音乐播放器。需先安装 T6 控制中心和 Appliance Compositor。",
+      "desc": "UnifyDrive UP6 / 极空间 T6 前置触摸屏应用：总览、文件管理、网络连接和设备设置，内置视频和音乐播放器。需先安装 T6 控制中心和 Appliance Compositor。",
       "i18n": {
         "en-US": {
           "display_name": "T6 Front Panel",
-          "desc": "Front touch-screen app for the UnifyDrive UP6 / ZSpace T6: dashboard, screen and network info, device settings, and a built-in video and music player. Requires T6 Control Center and Appliance Compositor."
+          "desc": "Front touch-screen app for the UnifyDrive UP6 / ZSpace T6: overview, files, network and device settings, and a built-in video and music player. Requires T6 Control Center and Appliance Compositor."
         }
       },
       "platform": [
@@ -214,6 +251,13 @@
         "影音娱乐"
       ],
       "icon_url": "./t6-panel/ICON.PNG",
+      "preview_urls": [
+        "https://raw.githubusercontent.com/jiaaom/FnDepot/main/t6-panel/overview.jpg",
+        "https://raw.githubusercontent.com/jiaaom/FnDepot/main/t6-panel/files.jpg",
+        "https://raw.githubusercontent.com/jiaaom/FnDepot/main/t6-panel/network.jpg",
+        "https://raw.githubusercontent.com/jiaaom/FnDepot/main/t6-panel/settings.jpg",
+        "https://raw.githubusercontent.com/jiaaom/FnDepot/main/t6-panel/control-center.jpg"
+      ],
       "readme_url": "./t6/README.zh-CN.md",
       "bug_report_url": "https://github.com/jiaaom/up6-linux-drivers/issues",
       "maintainer": "Mason",
@@ -271,6 +315,23 @@
               "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v1.4.2/t6-panel.fpk",
               "sha256": "3da053799dcf045c680ee7c1de10c05b54b879e859352587cd8a1eade18318c3",
               "size": 129562932
+            }
+          }
+        },
+        "2.0.0": {
+          "changelog": "全新外观和布局（Ridgeline 设计系统），支持中文和英文，默认浅色主题。总览以一张本机线描图开头，标注处理器、内存、温度、网口和存储读数；顶部的状态行一眼告诉你是否一切正常，有问题时点一下直达。文件：最多三个标签页，复制和移动在后台进行，文件图标按类型着色，文件夹大小在对话框里计算；退出登录会关闭打开的文件夹并清空剪贴板和最近文件。连接：连接地图，Wi-Fi 可加入企业（802.1X）网络，热点和本机地址都有二维码。屏幕闲置后先变暗（1–15 分钟，降到亮度的 10%、25% 或 50%，一碰即恢复），再熄屏（1、12、24 小时或从不）；原来的熄屏时间会转为变暗时间。设置新增声音和关于页面；SSH 开关前会先确认；遥控器的主页键在四个标签之间切换。不再提供日文。",
+          "i18n": {
+            "en-US": {
+              "changelog": "A new look and layout (Ridgeline design system), in Chinese and English, light by default. Overview opens with a drawing of the NAS labelled with its processor, memory, temperature, network and storage readings; a status line says whether all is well and opens the problem when it isn't. Files: up to three tabs, copies and moves in the background, file icons in colour by type, folder size in a dialog; signing out closes the open folders and clears the clipboard and recent files. Network: a connection map, Wi-Fi joins enterprise (802.1X) networks, QR codes for the hotspot and the NAS's address. When idle the screen first dims (after 1–15 minutes, to 10, 25 or 50 % of its brightness; a touch brings it back), then turns off (after 1, 12 or 24 hours, or never); the old screen timeout carries over as the dimming time. Settings adds Sound and About pages; SSH asks before it changes; the remote's Home key steps through the four tabs. Japanese is no longer offered."
+            }
+          },
+          "updated_at": "2026-10-17T06:58:57+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.0/t6-panel.fpk",
+              "sha256": "ed4c736ac9816c93ba554020929d0899451bbaa79ddded8f92d2713225fd8c4a",
+              "size": 136661537
             }
           }
         }
