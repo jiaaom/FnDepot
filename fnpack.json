@@ -351,6 +351,23 @@
               "size": 136661537
             }
           }
+        },
+        "2.0.2": {
+          "changelog": "标签栏白天改为靛青布面，当前项是一张缃色签条，远处也一眼找到；夜间当前项是靛青签条。状态栏把正在用的连接并排显示：蓝牙、Wi-Fi 或热点、有线。设置 › 屏幕 合成一行「闲置」，点进去设变暗和熄屏。英文界面下，文件里后排标签的名字在边缘淡出，不再从单词中间截断。",
+          "i18n": {
+            "en-US": {
+              "changelog": "The tab bar is indigo cloth by day, with the current tab on a pale straw-yellow label that is easy to find from across the room; at night it is an indigo label. The status bar shows every connection in use side by side: Bluetooth, Wi-Fi or the hotspot, and wired. Settings › Screen has one Idle row that opens a page for dimming and turning the screen off. In English, the names of tabs behind in Files fade out instead of being cut mid-word."
+            }
+          },
+          "updated_at": "2026-10-18T05:39:49+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.0.2/t6-panel.fpk",
+              "sha256": "7e49538b5420d922ae7d82364d4a8e24b00e174f7e97043ce6bbb20321078688",
+              "size": 136670875
+            }
+          }
         }
       }
     },
