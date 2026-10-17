@@ -71,6 +71,23 @@
               "size": 44969
             }
           }
+        },
+        "2.1.0": {
+          "changelog": "与 T6 前面板 2.1 一同发布，本身没有改动。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Released together with T6 Front Panel 2.1; no changes of its own."
+            }
+          },
+          "updated_at": "2026-10-18T06:20:08+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.1/t6-drivers.fpk",
+              "sha256": "ae1b7e400ceb6c1204932a6126b1f4cd64dda236791a77d03c873c6424091f5c",
+              "size": 44524
+            }
+          }
         }
       }
     },
@@ -168,6 +185,23 @@
               "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.0.1/t6-control.fpk",
               "sha256": "4864caca4d870424df628d26f104c9745b64fe7d24d961b7c40166351146bf5f",
               "size": 2621356
+            }
+          }
+        },
+        "2.1.0": {
+          "changelog": "与 T6 前面板 2.1 一同发布，本身没有改动。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Released together with T6 Front Panel 2.1; no changes of its own."
+            }
+          },
+          "updated_at": "2026-10-18T06:20:08+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.1/t6-control.fpk",
+              "sha256": "963789b6b0422ca3c4fc676028c9da114165ad5cbf0b96531ffbfcca7144a579",
+              "size": 2620525
             }
           }
         }
@@ -366,6 +400,23 @@
               "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.0.2/t6-panel.fpk",
               "sha256": "7e49538b5420d922ae7d82364d4a8e24b00e174f7e97043ce6bbb20321078688",
               "size": 136670875
+            }
+          }
+        },
+        "2.1.0": {
+          "changelog": "主题可以跟随夜间：在 设置 › 外观 选「跟随夜间」，再设定夜间时段（默认 22:00–07:00，可以跨过午夜）。控制中心的 夜案 会临时换成另一种主题，到夜间时段下一次切换时恢复跟随。夜间时段 和 变暗到 现在缩进在所属的设置下面。",
+          "i18n": {
+            "en-US": {
+              "changelog": "The theme can follow the night: in Settings › Appearance choose At night and set its hours (22:00–07:00 by default, across midnight if you like). Night desk in the control center switches to the other theme until the night hours next change, then the schedule takes over again. Night hours and Dim to now sit indented under the setting they belong to."
+            }
+          },
+          "updated_at": "2026-10-18T06:20:08+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.1/t6-panel.fpk",
+              "sha256": "895c9e7efd18d235433db5fca5fdfa55e06db715748b9ade0169cfe70ce55e86",
+              "size": 136702555
             }
           }
         }
