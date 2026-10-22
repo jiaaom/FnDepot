@@ -419,6 +419,23 @@
               "size": 136702555
             }
           }
+        },
+        "2.1.1": {
+          "changelog": "修复面板运行越久、滑动越卡的问题：运行一天左右后，所有页面滑动都会卡顿。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Scrolling no longer gets slower the longer the panel runs; after a day or so every page stuttered."
+            }
+          },
+          "updated_at": "2026-10-22T12:52:39+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.1.1/t6-panel.fpk",
+              "sha256": "7f292f40ca4415f7bc5f6493a7bf43167bb1a5bddd19ca326207a510789cb354",
+              "size": 136726005
+            }
+          }
         }
       }
     },
