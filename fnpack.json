@@ -88,6 +88,23 @@
               "size": 44524
             }
           }
+        },
+        "2.2.0": {
+          "changelog": "与 T6 前面板 2.2 一同发布，本身没有改动。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Released together with T6 Front Panel 2.2; no changes of its own."
+            }
+          },
+          "updated_at": "2026-10-23T09:34:21+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.2/t6-drivers.fpk",
+              "sha256": "990ccd271ac3369f93104797b46409050ac6729be94c8121b2f2def095f89aaf",
+              "size": 44504
+            }
+          }
         }
       }
     },
@@ -202,6 +219,23 @@
               "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.1/t6-control.fpk",
               "sha256": "963789b6b0422ca3c4fc676028c9da114165ad5cbf0b96531ffbfcca7144a579",
               "size": 2620525
+            }
+          }
+        },
+        "2.2.0": {
+          "changelog": "与 T6 前面板 2.2 一同发布，本身没有改动。",
+          "i18n": {
+            "en-US": {
+              "changelog": "Released together with T6 Front Panel 2.2; no changes of its own."
+            }
+          },
+          "updated_at": "2026-10-23T09:34:21+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.2/t6-control.fpk",
+              "sha256": "e1446cc00c273ad6fb3db98efd05fce671851144c2d5bb9cb4542039f3d2c365",
+              "size": 2620573
             }
           }
         }
@@ -434,6 +468,23 @@
               "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.1.1/t6-panel.fpk",
               "sha256": "7f292f40ca4415f7bc5f6493a7bf43167bb1a5bddd19ca326207a510789cb354",
               "size": 136726005
+            }
+          }
+        },
+        "2.2.0": {
+          "changelog": "长虹琉璃：页面背景如今隔着一层长虹玻璃，光影缓慢流动，白天是天空，夜里是台灯。屏幕变暗或熄灭、控制中心或对话框打开、播放视频时，背景会停住。设置 › 外观 › 动态背景 可以关掉动态效果；用电池时暂停（默认开启）在 NAS 使用电池供电时让背景停在一帧。状态栏在页面顶部是透明的，往下滑动后才变成磨砂。色彩校正从面板的设置移到了 fnOS 桌面上的应用网页，避免误触。",
+          "i18n": {
+            "en-US": {
+              "changelog": "长虹琉璃: the page backdrop is now seen through a sheet of fluted glass whose light drifts slowly, the sky by day and the desk lamp at night. It stands still while the screen is dimmed or off, while the control center or a dialog is up, and while a video plays. Settings › Appearance › Moving backdrop turns the motion off, and Pause on battery (on by default) holds it still while the NAS runs on its battery. The status bar is clear at the top of a page and frosts once the page scrolls. Colour correction has moved from the panel's Settings to the app's web page on the fnOS desktop, out of reach of a stray tap."
+            }
+          },
+          "updated_at": "2026-10-23T09:34:21+08:00",
+          "os_min_version": "1.2.0",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/jiaaom/up6-linux-drivers/releases/download/v2.2/t6-panel.fpk",
+              "sha256": "9f090c561568b010ced8dfc7625a669376afe1d1938d1cc03cdfe289012bb11e",
+              "size": 136944372
             }
           }
         }
